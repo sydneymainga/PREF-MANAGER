@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation_view_linear" />
+
+    <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+        android:id="@+id/bottom_navigation_view_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/White"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:bnc_mode="spread">
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/c_item_rest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_active="true"
+            app:bt_colorActive="@color/Green"
+            app:bt_colorInactive="@color/Blue"
+            app:bt_icon="@drawable/ic_home"
+            app:bt_padding="7dp"
+            app:bt_iconWidth="60dp"
+            app:bt_shape="@drawable/rounded_rect"
+
+            app:bt_title="home"
+            />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/d_item_rest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_active="false"
+            app:bt_colorActive="@color/Green"
+            app:bt_colorInactive="@color/Blue"
+            app:bt_icon="@drawable/ic_info_outline_black_24dp"
+            app:bt_padding="7dp"
+            app:bt_shape="@drawable/rounded_rect"
+            app:bt_iconWidth="60dp"
+            app:bt_title="home"
+            />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/e_item_rest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_active="false"
+            app:bt_colorActive="@color/Green"
+            app:bt_colorInactive="@color/Blue"
+            app:bt_icon="@drawable/ic_profile"
+            app:bt_padding="7dp"
+            app:bt_iconWidth="60dp"
+            app:bt_shape="@drawable/rounded_rect"
+
+            app:bt_title="profile"
+             />
+
+        <!-- Add more child items here - max upto 5 -->
+
+    </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+
+</RelativeLayout>
